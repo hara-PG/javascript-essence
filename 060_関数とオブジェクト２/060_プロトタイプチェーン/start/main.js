@@ -3,9 +3,13 @@ function Person(name, age) {
   this.age = age;
 }
 
-Person.prototype.hello = function() {
-  console.log('hello ' + this.name);
-}
+// Person.prototype.hello = function () {
+//   console.log("Person hello " + this.name);
+// };
 
-const bob = new Person('Bob', 18);
+Object.prototype.hello = function () {
+  console.log("Object hello " + this.name);
+};
+
+const bob = new Person("Bob", 18);
 bob.hello();
