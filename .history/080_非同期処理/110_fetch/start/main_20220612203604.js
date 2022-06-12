@@ -13,9 +13,8 @@
 async function fetchUsers() {
   let response = await fetch("users.json");
   let json = await response.json();
-  for (let user of json) {
+}.then(function() {
+  for(let user of json) {
     console.log(`I'm ${user.name}, ${user.age}`);
   }
-}
-
-fetchUsers();
+})

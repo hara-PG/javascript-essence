@@ -17,5 +17,3 @@ async function fetchUsers() {
     console.log(`I'm ${user.name}, ${user.age}`);
   }
 }
-
-fetchUsers();
