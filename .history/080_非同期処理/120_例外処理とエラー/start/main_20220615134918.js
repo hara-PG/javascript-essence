@@ -1,0 +1,25 @@
+async function fetchUsers() {
+  const response = await fetch("users.json");
+  console.log(response);
+  const json = await response.json();
+  return json;
+}
+
+async function init() {
+  const users = await fetchUsers();
+  for (let user of users) {
+    console.log(`Im ${user.name}, ${user.age} years old`);
+  }
+}
+
+init();
+
+// try {
+//   console.log("start");
+//   throw new Error();
+//   console.log("end");
+// } catch (e) {
+//   console.log(e);
+// } finally {
+//   console.log("bye");
+// }

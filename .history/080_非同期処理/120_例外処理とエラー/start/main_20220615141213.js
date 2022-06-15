@@ -25,7 +25,7 @@ async function init() {
     if (e instanceof NoDataError) {
       console.error(e);
     } else {
-      console.error("ERROR OK");
+      console.error("");
     }
   } finally {
     console.log("bye");

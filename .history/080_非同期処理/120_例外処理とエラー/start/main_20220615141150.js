@@ -22,10 +22,10 @@ async function init() {
       console.log(`Im ${user.name}, ${user.age} years old`);
     }
   } catch (e) {
-    if (e instanceof NoDataError) {
+    if (e instanceof NoDetaError) {
       console.error(e);
     } else {
-      console.error("ERROR OK");
+      console.error("");
     }
   } finally {
     console.log("bye");

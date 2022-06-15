@@ -3,18 +3,12 @@ async function fetchUsers() {
   if (response.ok) {
     const json = await response.json();
     if (!json.length) {
-      throw new NoDataError("no data found");
+      throw new Error("no data found");
     }
     return json;
   }
 }
 
-class NoDataError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = "NoDataError";
-  }
-}
 async function init() {
   try {
     const users = await fetchUsers();
@@ -22,13 +16,7 @@ async function init() {
       console.log(`Im ${user.name}, ${user.age} years old`);
     }
   } catch (e) {
-    if (e instanceof NoDataError) {
-      console.error(e);
-    } else {
-      console.error("ERROR OK");
-    }
-  } finally {
-    console.log("bye");
+    console.error(e);
   }
 }
 
