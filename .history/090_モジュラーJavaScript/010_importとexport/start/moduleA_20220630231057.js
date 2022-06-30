@@ -1,7 +1,5 @@
 export let publicVal = 0;
 
-export function publicFn() {
+export function publicVal() {
   console.log("publicFn called: ");
 }
-
-export default 0;
