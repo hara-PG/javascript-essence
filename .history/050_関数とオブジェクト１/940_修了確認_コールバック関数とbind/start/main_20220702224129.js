@@ -11,22 +11,22 @@ function calcFactory(val, callback) {
   return {
     plus: function (target) {
       const newVal = val + target;
-      callbackAfter1s(`${val} + ${target} = ${newVal}`);
+      callback(`${val} + ${target} = ${newVal}`);
       val = newVal;
     },
     minus: function (target) {
       const newVal = val - target;
-      callbackAfter1s(`${val} - ${target} = ${newVal}`);
+      callback(`${val} - ${target} = ${newVal}`);
       val = newVal;
     },
     multiply: function (target) {
       const newVal = val * target;
-      callbackAfter1s(`${val} x ${target} = ${newVal}`);
+      callback(`${val} x ${target} = ${newVal}`);
       val = newVal;
     },
     divide: function (target) {
       const newVal = val / target;
-      callbackAfter1s(`${val} / ${target} = ${newVal}`);
+      callback(`${val} / ${target} = ${newVal}`);
       val = newVal;
     },
   };
