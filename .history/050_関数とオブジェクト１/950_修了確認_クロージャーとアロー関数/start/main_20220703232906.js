@@ -17,12 +17,6 @@
 // const result = add5(10);
 // console.log(result);
 
-const addNumberFactory = (num) => (value) => num + value;
-
-const add5 = addNumberFactory(5);
-const result = add5(10);
-console.log(result);
-
 /**
  * 問題２：
  * incrementFactoryを短く書き直してみましょう。

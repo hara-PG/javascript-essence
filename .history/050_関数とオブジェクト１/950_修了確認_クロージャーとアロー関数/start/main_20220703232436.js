@@ -5,23 +5,23 @@
  * 問題１：
  * addNumberFactoryを短く書き直してみましょう。
  */
-
-// function addNumberFactory(num) {
-//   function add5(value) {
-//     return num + value;
-//   }
-//   return add5;
-// }
-
-// const add5 = addNumberFactory(5);
-// const result = add5(10);
-// console.log(result);
-
-const addNumberFactory = (num) => (value) => num + value;
+function addNumberFactory(num) {
+  function addNumber(value) {
+    return num + value;
+  }
+  return addNumber;
+}
 
 const add5 = addNumberFactory(5);
 const result = add5(10);
 console.log(result);
+
+function addNumberFactory1(num) {
+  return num;
+}
+
+addNumberFactory1(5);
+console.log(addNumberFactory1);
 
 /**
  * 問題２：
